@@ -1,12 +1,82 @@
 import Link from "next/link";
 import { BangladeshMap } from "@/components/heritage/BangladeshMap";
-import { MapPin, BookOpen, Award, ChevronRight } from "lucide-react";
+import { MapPin, BookOpen, Award, ChevronRight, Sparkles } from "lucide-react";
 
 export const metadata = {
   title: "Heritage | BanglaRTP",
   description:
     "Explore Bangladesh's history, geography, and the extraordinary seven freedom fighters awarded the Bir Sreshtho — Bangladesh's highest military honor.",
 };
+
+// ── Wonders data ──────────────────────────────────────────────────────────────
+const wonders = [
+  {
+    emoji: "🏛️",
+    title: "Jatiyo Sangsad Bhaban",
+    bangla: "জাতীয় সংসদ ভবন",
+    subtitle: "National Parliament Building",
+    location: "Sher-e-Bangla Nagar, Dhaka",
+    type: "Architecture",
+    typeBg: "bg-blue-100 text-blue-700",
+    description:
+      "Designed by American architect Louis Kahn, this iconic modernist masterpiece is considered one of the finest architectural achievements of the 20th century. The complex of bold geometric forms serves as the seat of Bangladesh's national parliament and is a symbol of the country's democratic aspirations.",
+  },
+  {
+    emoji: "⚪",
+    title: "Jatiyo Smriti Soudho",
+    bangla: "জাতীয় স্মৃতি সৌধ",
+    subtitle: "National Martyrs' Memorial",
+    location: "Savar, Dhaka",
+    type: "Historic",
+    typeBg: "bg-brand-red-100 text-brand-red",
+    description:
+      "A towering 150-foot monument honoring the millions of martyrs who gave their lives in the 1971 Liberation War. Its seven triangular pylons rise together to form a soaring peak, symbolizing the pivotal moments of the Bangladeshi independence movement.",
+  },
+  {
+    emoji: "🌊",
+    title: "Cox's Bazar",
+    bangla: "কক্সবাজার",
+    subtitle: "World's Longest Natural Sea Beach",
+    location: "Chittagong Division",
+    type: "Nature",
+    typeBg: "bg-teal-100 text-teal-700",
+    description:
+      "The world's longest natural sea beach, stretching 120 kilometers (75 miles) along the Bay of Bengal. Golden sand, gentle waves, and stunning sunsets make it Bangladesh's most beloved seaside destination and a major tourist draw.",
+  },
+  {
+    emoji: "🐅",
+    title: "The Sundarbans",
+    bangla: "সুন্দরবন",
+    subtitle: "World's Largest Mangrove Forest",
+    location: "Khulna Division",
+    type: "UNESCO",
+    typeBg: "bg-green-100 text-green-700",
+    description:
+      "The world's largest mangrove forest and UNESCO World Heritage site, home to the iconic Royal Bengal Tiger. This vast delta of 10,000 square kilometers of tangled waterways, mudflats, and forest supports incredible biodiversity including crocodiles, spotted deer, and hundreds of bird species.",
+  },
+  {
+    emoji: "🕌",
+    title: "Shat Gombuj Masjid",
+    bangla: "ষাট গম্বুজ মসজিদ",
+    subtitle: "Sixty Dome Mosque",
+    location: "Bagerhat, Khulna Division",
+    type: "UNESCO",
+    typeBg: "bg-green-100 text-green-700",
+    description:
+      "A 15th-century UNESCO World Heritage mosque built during the Bengal Sultanate, featuring 77 squat domes (traditionally counted as 60). Constructed by the Muslim saint Khan Jahan Ali around 1459, it is the largest historical mosque in Bangladesh and a masterpiece of medieval Islamic architecture in the subcontinent.",
+  },
+  {
+    emoji: "🍃",
+    title: "Sylhet Tea Gardens",
+    bangla: "সিলেটের চা বাগান",
+    subtitle: "Rolling Hills of Green",
+    location: "Sylhet Division",
+    type: "Nature",
+    typeBg: "bg-teal-100 text-teal-700",
+    description:
+      "The rolling green hills of Sylhet are home to Bangladesh's sprawling tea estates, some of the oldest in South Asia. The region produces some of the world's finest tea and offers visitors breathtaking landscapes of terraced plantations, making it a jewel of Bangladeshi agricultural heritage.",
+  },
+];
 
 // ── Timeline data ─────────────────────────────────────────────────────────────
 const timeline = [
@@ -192,8 +262,9 @@ export default function HeritagePage() {
           {/* Jump nav */}
           <div className="flex flex-wrap justify-center gap-3">
             {[
-              { href: "#map", label: "Bangladesh Map", icon: MapPin },
-              { href: "#history", label: "History", icon: BookOpen },
+              { href: "#map",       label: "Bangladesh Map", icon: MapPin },
+              { href: "#wonders",   label: "Wonders",        icon: Sparkles },
+              { href: "#history",   label: "History",        icon: BookOpen },
               { href: "#bir-sreshtho", label: "Bir Sreshtho", icon: Award },
             ].map(({ href, label, icon: Icon }) => (
               <a
@@ -282,6 +353,64 @@ export default function HeritagePage() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── Section 1b: Wonders of Bangladesh ────────────────────────────── */}
+      <section id="wonders" className="page-container py-16 scroll-mt-20">
+        <div className="flex items-center gap-2 text-brand-green mb-2">
+          <Sparkles size={18} />
+          <span className="text-sm font-semibold uppercase tracking-wide">Landmarks &amp; Wonders</span>
+        </div>
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-50 mb-2">
+          Wonders of Bangladesh — <span className="font-bangla font-normal">ঐতিহ্যবাহী বাংলাদেশ</span>
+        </h2>
+        <p className="text-gray-500 dark:text-gray-400 mb-10 max-w-2xl">
+          Bangladesh is home to architectural marvels, natural wonders, and cultural treasures that tell the story of our land.
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {wonders.map((w) => (
+            <div
+              key={w.title}
+              className="group flex flex-col rounded-2xl border border-gray-200 dark:border-gray-800 bg-brand-cream dark:bg-gray-900 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all overflow-hidden"
+            >
+              {/* Accent bar */}
+              <div className="h-1.5 bg-brand-green w-full" />
+
+              <div className="p-6 flex flex-col flex-1 gap-3">
+                {/* Emoji + type badge */}
+                <div className="flex items-start justify-between gap-2">
+                  <span className="text-4xl leading-none">{w.emoji}</span>
+                  <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${w.typeBg}`}>
+                    {w.type}
+                  </span>
+                </div>
+
+                {/* Title */}
+                <div>
+                  <h3 className="font-bold text-brand-green text-lg leading-tight group-hover:text-brand-green-light transition-colors">
+                    {w.title}
+                  </h3>
+                  <p className="font-bangla text-sm text-gray-500 dark:text-gray-400 mt-0.5">
+                    {w.bangla}
+                  </p>
+                  <p className="text-xs text-gray-400 italic mt-0.5">{w.subtitle}</p>
+                </div>
+
+                {/* Location */}
+                <p className="text-xs text-gray-500 dark:text-gray-400 flex items-center gap-1.5">
+                  <MapPin size={11} className="shrink-0 text-brand-green" />
+                  {w.location}
+                </p>
+
+                {/* Description */}
+                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed flex-1">
+                  {w.description}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 

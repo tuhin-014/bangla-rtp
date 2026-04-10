@@ -17,7 +17,7 @@ const phases = [
       "Print your I-94 from i94.cbp.dhs.gov",
       "Apply for SSN at Durham SSA office (wait 10 business days after entry)",
       "Join TBSNC and community WhatsApp groups",
-      "Attend Friday prayers at ICM, ICR, or IAR",
+      "Attend Friday prayers at ICM, IAR, or a local masjid",
     ],
   },
   {

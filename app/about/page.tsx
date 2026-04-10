@@ -35,7 +35,7 @@ export default function AboutPage() {
 
       {/* Two homes */}
       <section className="mb-14">
-        <div className="rounded-2xl bg-gradient-to-r from-brand-green/10 to-brand-navy/10 dark:from-brand-green/20 dark:to-brand-navy/20 border border-brand-green/20 dark:border-brand-green/30 p-8 flex flex-col sm:flex-row items-center gap-6">
+        <div className="rounded-2xl bg-gradient-to-r from-brand-green/10 to-brand-red/10 dark:from-brand-green/20 dark:to-brand-red/20 border border-brand-green/20 dark:border-brand-green/30 p-8 flex flex-col sm:flex-row items-center gap-6">
           <div className="flex items-center gap-4 shrink-0">
             <BangladeshFlag className="h-16 rounded-lg shadow border border-white/30" />
             <span className="text-3xl">🤝</span>

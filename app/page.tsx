@@ -18,6 +18,7 @@ import {
   Sparkles,
   Heart,
   Globe,
+  Landmark,
 } from "lucide-react";
 import { events } from "@/data/events";
 import { formatDateShort, isUpcoming } from "@/lib/utils";
@@ -93,6 +94,15 @@ const featuredLinks = [
     desc: "Cultural, religious & student",
     color: "bg-brand-red-50",
     textColor: "text-brand-red",
+    featured: false,
+  },
+  {
+    href: "/heritage",
+    icon: Landmark,
+    title: "Our Heritage",
+    desc: "History, map & Bir Sreshtho",
+    color: "bg-brand-green-50",
+    textColor: "text-brand-green",
     featured: false,
   },
   {
@@ -172,8 +182,8 @@ export default function HomePage() {
 
   const [featured, ...rest] = featuredLinks;
   const row1 = rest.slice(0, 4);
-  const row2 = rest.slice(4, 7);
-  const row3 = rest.slice(7);
+  const row2 = rest.slice(4, 8);
+  const row3 = rest.slice(8);
 
   return (
     <div>
@@ -282,8 +292,8 @@ export default function HomePage() {
           ))}
         </div>
 
-        {/* Row 2: 3 cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
+        {/* Row 2: 4 cards */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-4">
           {row2.map(({ href, icon: Icon, title, desc, color, textColor }) => (
             <Link
               key={href}

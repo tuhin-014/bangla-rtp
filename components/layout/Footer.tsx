@@ -13,6 +13,7 @@ const links = {
   resources: [
     { href: "/newcomer", label: "Newcomer Guide" },
     { href: "/directory", label: "Community Directory" },
+    { href: "/heritage", label: "Our Heritage" },
     { href: "/about", label: "About & Contact" },
     { href: "/anthems", label: "National Anthems" },
     { href: "/entrepreneurs", label: "Local Entrepreneurs" },

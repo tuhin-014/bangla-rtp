@@ -3,78 +3,49 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
-// Division centers (approximate, in SVG coordinate space)
-// viewBox "0 0 520 660": x = (lon - 87.9) * 107, y = (26.7 - lat) * 107
+// Division centers derived from official GeoJSON bounds
+// viewBox "0 0 500 630", bounds: lon 88.084–92.673, lat 20.671–26.447
 const DIVISIONS = [
-  { id: "rangpur",    name: "Rangpur",    cx: 145, cy: 102 },
-  { id: "rajshahi",   name: "Rajshahi",   cx:  88, cy: 246 },
-  { id: "mymensingh", name: "Mymensingh", cx: 262, cy: 200 },
-  { id: "dhaka",      name: "Dhaka",      cx: 267, cy: 310, capital: true },
-  { id: "sylhet",     name: "Sylhet",     cx: 422, cy: 252 },
-  { id: "khulna",     name: "Khulna",     cx: 155, cy: 408 },
-  { id: "barisal",    name: "Barisal",    cx: 258, cy: 455 },
-  { id: "chittagong", name: "Chittagong", cx: 418, cy: 450 },
+  { id: "rangpur",    name: "Rangpur",    cx: 131.9, cy:  83.6 },
+  { id: "rajshahi",   name: "Rajshahi",   cx:  74.4, cy: 226.1 },
+  { id: "mymensingh", name: "Mymensingh", cx: 252.2, cy: 183.9 },
+  { id: "dhaka",      name: "Dhaka",      cx: 252.2, cy: 289.5, capital: true },
+  { id: "sylhet",     name: "Sylhet",     cx: 409.2, cy: 236.7 },
+  { id: "khulna",     name: "Khulna",     cx: 147.6, cy: 395.1 },
+  { id: "barisal",    name: "Barisal",    cx: 247.0, cy: 426.8 },
+  { id: "chittagong", name: "Chittagong", cx: 398.7, cy: 426.8 },
 ];
 
-// Simplified but recognizable outline of Bangladesh, clockwise from NW corner.
-// Coordinates derived from WGS-84 border points mapped to the viewBox.
+// Accurate path derived from Natural Earth / world.geo.json GeoJSON (public domain).
+// 36 real border points, scaled to viewBox 0 0 500 630 with 10px padding.
 const OUTLINE =
-  "M18,7 L64,7 L118,13 L171,32 L203,37 " +
-  "L246,64 L278,80 L299,113 L331,150 L363,182 " +
-  // Sylhet protrusion NE
-  "L406,171 L465,193 L471,257 " +
-  // Down Tripura / Mizoram
-  "L439,321 L428,396 " +
-  // Chittagong coast
-  "L452,428 L490,471 L479,535 " +
-  // Cox's Bazar tip
-  "L449,599 L439,638 " +
-  // Bay of Bengal coast going west
-  "L385,577 L332,556 L289,567 " +
-  "L246,503 L203,482 L160,503 " +
-  // Sundarbans
-  "L128,514 L118,493 L86,471 L64,428 " +
-  // West border going north
-  "L54,385 L32,342 L21,289 L11,235 " +
-  "L16,182 L19,128 L18,64 Z";
+  "M490.0,475.3 L487.9,551.0 L451.3,535.0 L458.2,620.0 " +
+  "L428.3,564.9 L422.3,511.1 L402.4,460.3 L358.6,398.8 " +
+  "L262.3,394.6 L271.8,438.1 L239.0,496.9 L194.4,475.5 " +
+  "L179.2,494.7 L149.6,483.2 L109.1,473.7 L92.8,386.8 " +
+  "L56.6,307.3 L74.4,243.7 L10.0,215.4 L33.2,176.9 " +
+  "L98.6,137.6 L23.1,81.7 L60.1,10.0 L142.9,55.6 " +
+  "L192.9,60.8 L202.1,134.3 L301.6,148.8 L398.7,147.2 " +
+  "L459.0,165.2 L410.7,254.6 L363.9,260.7 L331.6,320.8 " +
+  "L388.9,375.6 L406.0,308.1 L434.9,307.7 Z";
 
 export function BangladeshMap({ className }: { className?: string }) {
   const [hovered, setHovered] = useState<string | null>(null);
 
   return (
     <svg
-      viewBox="0 0 520 660"
+      viewBox="0 0 500 630"
       className={cn("w-full h-full", className)}
       aria-label="Map of Bangladesh showing 8 administrative divisions"
       role="img"
     >
-      {/* Drop shadow filter */}
       <defs>
         <filter id="map-shadow" x="-10%" y="-10%" width="120%" height="120%">
           <feDropShadow dx="2" dy="3" stdDeviation="6" floodColor="#006A4E" floodOpacity="0.25" />
         </filter>
-        {/* River blue */}
-        <style>{`
-          .division-label {
-            font-family: system-ui, sans-serif;
-            font-size: 13px;
-            fill: rgba(255,255,255,0.92);
-            pointer-events: none;
-            user-select: none;
-          }
-          .division-label.capital {
-            font-size: 15px;
-            font-weight: 700;
-            fill: white;
-          }
-          .division-dot {
-            cursor: pointer;
-            transition: r 0.15s;
-          }
-        `}</style>
       </defs>
 
-      {/* Country fill */}
+      {/* Country outline — accurate GeoJSON-derived path */}
       <path
         d={OUTLINE}
         fill="#006A4E"
@@ -84,23 +55,15 @@ export function BangladeshMap({ className }: { className?: string }) {
         filter="url(#map-shadow)"
       />
 
-      {/* Simplified major rivers (Padma/Meghna/Jamuna) */}
-      {/* Jamuna: NW to Dhaka area */}
-      <path d="M145,60 Q165,120 180,180 Q200,240 230,290 Q250,320 267,310"
-        fill="none" stroke="#80C4A8" strokeWidth="2" strokeOpacity="0.5" strokeLinecap="round" />
-      {/* Meghna: Dhaka to coast */}
-      <path d="M267,310 Q272,360 278,410 Q270,460 260,500"
-        fill="none" stroke="#80C4A8" strokeWidth="2" strokeOpacity="0.5" strokeLinecap="round" />
-
-      {/* Division hover areas (invisible, just for interaction) */}
+      {/* Division hover hit areas */}
       {DIVISIONS.map((div) => (
         <circle
           key={`hit-${div.id}`}
           cx={div.cx}
           cy={div.cy}
-          r={40}
+          r={38}
           fill="transparent"
-          className="division-dot"
+          style={{ cursor: "pointer" }}
           onMouseEnter={() => setHovered(div.id)}
           onMouseLeave={() => setHovered(null)}
         />
@@ -112,37 +75,50 @@ export function BangladeshMap({ className }: { className?: string }) {
           key={`dot-${div.id}`}
           cx={div.cx}
           cy={div.cy}
-          r={div.capital ? (hovered === div.id ? 9 : 7) : (hovered === div.id ? 7 : 5)}
+          r={div.capital ? 7 : 5}
           fill={div.capital ? "#F42A41" : "white"}
-          fillOpacity={div.capital ? 1 : 0.75}
-          stroke={div.capital ? "white" : "#006A4E"}
+          fillOpacity={div.capital ? 1 : 0.8}
+          stroke={div.capital ? "white" : "rgba(0,74,55,0.6)"}
           strokeWidth="1.5"
-          style={{ transition: "r 0.15s" }}
           className="pointer-events-none"
+          style={{ transition: "r 0.15s" }}
         />
       ))}
 
       {/* Division labels */}
       {DIVISIONS.map((div) => {
         const show = hovered === div.id || div.capital;
-        const y = div.capital ? div.cy - 14 : div.cy - 12;
         return (
           <text
             key={`label-${div.id}`}
             x={div.cx}
-            y={y}
+            y={div.cy - (div.capital ? 13 : 11)}
             textAnchor="middle"
-            className={`division-label${div.capital ? " capital" : ""}`}
-            opacity={show ? 1 : 0.55}
-            style={{ transition: "opacity 0.15s" }}
+            fontSize={div.capital ? 15 : 13}
+            fontWeight={div.capital ? "700" : "400"}
+            fill="white"
+            opacity={show ? 1 : 0.6}
+            className="pointer-events-none select-none"
+            style={{
+              fontFamily: "system-ui, sans-serif",
+              transition: "opacity 0.15s",
+            }}
           >
             {div.name}
           </text>
         );
       })}
 
-      {/* Capital star indicator */}
-      <text x={267} y={335} textAnchor="middle" fontSize="10" fill="rgba(255,255,255,0.6)" className="pointer-events-none select-none">
+      {/* Capital star */}
+      <text
+        x={252.2}
+        y={312}
+        textAnchor="middle"
+        fontSize="10"
+        fill="rgba(255,255,255,0.55)"
+        className="pointer-events-none select-none"
+        style={{ fontFamily: "system-ui, sans-serif" }}
+      >
         ★ Capital
       </text>
     </svg>

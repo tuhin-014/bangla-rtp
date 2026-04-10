@@ -69,12 +69,12 @@ export const organizations: Organization[] = [
   },
   {
     id: "baian",
-    name: "Baian",
-    fullName: "Baian — Triangle NC",
+    name: "BAIAN",
+    fullName: "Bangladeshi American Islamic Association North Carolina",
     description:
-      "A community organization serving Bangladeshis in the Research Triangle area. Primarily active through local community networks. Contact via community members at local masjids or TBSNC events for more information.",
+      "Bangladeshi Muslim community organization active in the Research Triangle area. Hosts family nights, Bangladeshi food festivals, and community gatherings — events have been held at Parkwood Masjid (JIAR) in Durham. No public website; active through community networks.",
     type: "religious",
-    city: "Research Triangle",
+    city: "Durham",
   },
   {
     id: "probaho",

@@ -2,30 +2,17 @@ import type { Masjid } from "@/lib/types";
 
 export const masjids: Masjid[] = [
   {
-    id: "icr",
-    name: "Islamic Center of Raleigh (ICR)",
+    id: "iar",
+    name: "Islamic Association of Raleigh (IAR)",
     address: "808 Atwater St, Raleigh, NC 27607",
     city: "Raleigh",
     phone: "(919) 834-9572",
-    website: "https://www.icraleigh.com",
-    prayer_times_url: "https://www.icraleigh.com/prayer-times",
-    maps_url: "https://maps.google.com/?q=Islamic+Center+of+Raleigh+808+Atwater+St",
+    website: "https://www.raleighmasjid.org",
+    prayer_times_url: "https://www.raleighmasjid.org/prayer-times",
+    maps_url: "https://maps.google.com/?q=Islamic+Association+of+Raleigh+808+Atwater+St",
     description:
       "One of the largest Islamic centers in the Triangle, offering daily prayers, Jumu'ah, Islamic school, and community programs.",
     jummah_time: "1:30 PM (Winter) / 2:00 PM (Summer)",
-  },
-  {
-    id: "iar",
-    name: "Islamic Association of Raleigh (IAR)",
-    address: "3020 Ligon St, Raleigh, NC 27607",
-    city: "Raleigh",
-    phone: "(919) 834-7770",
-    website: "https://www.iar.org",
-    prayer_times_url: "https://www.iar.org/prayer-times",
-    maps_url: "https://maps.google.com/?q=Islamic+Association+of+Raleigh+3020+Ligon+St",
-    description:
-      "Established Islamic center serving the Raleigh Muslim community with daily prayers, weekend Islamic school, and youth programs.",
-    jummah_time: "1:15 PM",
   },
   {
     id: "icm",

@@ -42,15 +42,25 @@ export default function AnthemsPage() {
             </div>
           </div>
 
-          {/* Video */}
-          <div className="rounded-2xl overflow-hidden mb-6 aspect-video bg-gray-100 dark:bg-gray-900">
-            <iframe
-              className="w-full h-full"
-              src="https://www.youtube.com/embed/xGlT_kiC7is"
-              title="Amar Shonar Bangla — Bangladesh National Anthem"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
+          {/* Audio player */}
+          <div className="rounded-xl bg-gray-50 dark:bg-gray-900/60 border border-gray-200 dark:border-gray-800 p-5 mb-6">
+            <audio controls className="w-full" preload="metadata">
+              <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/bc/Amar_Sonar_Bangla_-_official_vocal_music_of_the_National_anthem_of_Bangladesh.ogg/Amar_Sonar_Bangla_-_official_vocal_music_of_the_National_anthem_of_Bangladesh.ogg.mp3" type="audio/mpeg" />
+              <source src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Amar_Sonar_Bangla_-_official_vocal_music_of_the_National_anthem_of_Bangladesh.ogg" type="audio/ogg" />
+              Your browser does not support the audio element.{" "}
+              <a href="https://upload.wikimedia.org/wikipedia/commons/b/bc/Amar_Sonar_Bangla_-_official_vocal_music_of_the_National_anthem_of_Bangladesh.ogg">Download the audio file</a>
+            </audio>
+            <div className="mt-2 flex items-center justify-between flex-wrap gap-2">
+              <p className="text-xs text-gray-400">Audio: Public domain via Wikimedia Commons</p>
+              <a
+                href="https://www.youtube.com/results?search_query=amar+shonar+bangla+national+anthem"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-brand-green hover:underline"
+              >
+                Listen on YouTube →
+              </a>
+            </div>
           </div>
 
           {/* Lyrics */}
@@ -121,15 +131,25 @@ I have seen spread all over sweet smiles.`}
             </div>
           </div>
 
-          {/* Video */}
-          <div className="rounded-2xl overflow-hidden mb-6 aspect-video bg-gray-100 dark:bg-gray-900">
-            <iframe
-              className="w-full h-full"
-              src="https://www.youtube.com/embed/vPKp29Luryc"
-              title="The Star-Spangled Banner — US National Anthem"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
+          {/* Audio player */}
+          <div className="rounded-xl bg-gray-50 dark:bg-gray-900/60 border border-gray-200 dark:border-gray-800 p-5 mb-6">
+            <audio controls className="w-full" preload="metadata">
+              <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/a/a4/The_Star-Spangled_Banner_-_U.S._Army_Band.ogg/The_Star-Spangled_Banner_-_U.S._Army_Band.ogg.mp3" type="audio/mpeg" />
+              <source src="https://upload.wikimedia.org/wikipedia/commons/a/a4/The_Star-Spangled_Banner_-_U.S._Army_Band.ogg" type="audio/ogg" />
+              Your browser does not support the audio element.{" "}
+              <a href="https://upload.wikimedia.org/wikipedia/commons/a/a4/The_Star-Spangled_Banner_-_U.S._Army_Band.ogg">Download the audio file</a>
+            </audio>
+            <div className="mt-2 flex items-center justify-between flex-wrap gap-2">
+              <p className="text-xs text-gray-400">Audio: Public domain via Wikimedia Commons (U.S. Army Band)</p>
+              <a
+                href="https://www.youtube.com/results?search_query=star+spangled+banner+national+anthem"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-brand-green hover:underline"
+              >
+                Listen on YouTube →
+              </a>
+            </div>
           </div>
 
           {/* Lyrics */}

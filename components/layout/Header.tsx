@@ -10,6 +10,7 @@ const navLinks = [
   { href: "/masjids", label: "Masjids" },
   { href: "/restaurants", label: "Restaurants" },
   { href: "/events", label: "Events" },
+  { href: "/community", label: "Community" },
   { href: "/newcomer", label: "Newcomer Guide" },
   { href: "/directory", label: "Directory" },
   { href: "/entrepreneurs", label: "Entrepreneurs" },

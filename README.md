@@ -32,6 +32,11 @@ BanglaRTP is **100% free, no paywall, no ads** — built by and for the communit
 | `/directory` | Bangla-speaking doctors, lawyers, CPAs, realtors |
 | `/entrepreneurs` | Local Bangladeshi entrepreneurs & home businesses |
 | `/entrepreneurs/submit` | Free submission form for new business listings |
+| `/community` | Community feed — posts, needs, offers, ride share, stories |
+| `/community/new` | Create a post (sign-in required for live mode) |
+| `/community/[id]` | Post detail with comments |
+| `/community/profile` | User profile and own posts |
+| `/auth/signin` | Sign in / create account |
 | `/about` | Mission, community orgs, contact/corrections form |
 
 ---

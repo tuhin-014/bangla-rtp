@@ -2,6 +2,7 @@ import Link from "next/link";
 
 const links = {
   community: [
+    { href: "/community", label: "Community Feed" },
     { href: "/grocery", label: "Halal Grocery" },
     { href: "/masjids", label: "Masjids" },
     { href: "/restaurants", label: "Halal Restaurants" },

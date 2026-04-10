@@ -1,6 +1,7 @@
 import Link from "next/link";
 import {
   Briefcase,
+  MessageSquare,
   ShoppingBasket,
   MoonStar,
   UtensilsCrossed,
@@ -63,6 +64,13 @@ const quickLinks = [
     title: "Local Entrepreneurs",
     desc: "Caterers, tailors, tutors & more",
     color: "bg-amber-50 text-amber-700 dark:bg-amber-950 dark:text-amber-400",
+  },
+  {
+    href: "/community",
+    icon: MessageSquare,
+    title: "Community Feed",
+    desc: "Ask, offer, share, connect",
+    color: "bg-indigo-50 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-400",
   },
 ];
 

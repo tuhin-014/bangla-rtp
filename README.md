@@ -173,7 +173,6 @@ BanglaRTP was built to support the work of:
 | **BPOCNC** | Bangladeshi Professionals Organization of Carolinas |
 | **ICM** | Islamic Center of Morrisville |
 | **IAR** | Islamic Association of Raleigh |
-| **ICR** | Islamic Center of Raleigh |
 
 This site is not affiliated with any of the above — it's an independent community volunteer project that aims to complement their work.
 

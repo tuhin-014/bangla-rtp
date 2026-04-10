@@ -8,7 +8,7 @@ export const metadata = {
     "Bangladeshi cultural, religious, student, and professional organizations in the Research Triangle — Raleigh, Durham, Cary, Morrisville, Chapel Hill.",
 };
 
-const ALL_TYPES: OrgType[] = ["cultural", "religious", "student", "professional", "youth"];
+const ALL_TYPES: OrgType[] = ["cultural", "religious", "student", "professional", "youth", "sports"];
 
 export default function OrganizationsPage({
   searchParams,

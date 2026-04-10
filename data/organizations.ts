@@ -1,4 +1,4 @@
-export type OrgType = "cultural" | "religious" | "student" | "professional" | "youth";
+export type OrgType = "cultural" | "religious" | "student" | "professional" | "youth" | "sports";
 
 export interface Organization {
   id: string;
@@ -87,6 +87,24 @@ export const organizations: Organization[] = [
     foundedYear: 1990,
   },
   {
+    id: "rbt",
+    name: "Royal Bengal Tiger",
+    fullName: "Royal Bengal Tiger Cricket Club",
+    description:
+      "Bangladeshi cricket club based in the Research Triangle area. Participates in local leagues and community tournaments. Open to new players. Contact via community networks for practice schedules and match info.",
+    type: "sports",
+    city: "Research Triangle",
+  },
+  {
+    id: "rtp-tigers",
+    name: "RTP Tigers",
+    fullName: "RTP Tigers Cricket Club",
+    description:
+      "Community cricket team for Bangladeshi players in the Research Triangle Park area. Regular practice sessions and weekend matches. No public website; active through community networks and local Bangladeshi groups.",
+    type: "sports",
+    city: "Research Triangle",
+  },
+  {
     id: "baian",
     name: "BAIAN",
     fullName: "Bangladeshi American Islamic Association North Carolina",
@@ -103,4 +121,5 @@ export const ORG_TYPE_META: Record<OrgType, { label: string; emoji: string; colo
   student:      { label: "Student",      emoji: "🎓", color: "text-blue-700 dark:text-blue-400",    bg: "bg-blue-50 dark:bg-blue-950/40" },
   professional: { label: "Professional", emoji: "💼", color: "text-purple-700 dark:text-purple-400", bg: "bg-purple-50 dark:bg-purple-950/40" },
   youth:        { label: "Youth",        emoji: "⭐", color: "text-green-700 dark:text-green-400",  bg: "bg-green-50 dark:bg-green-950/40" },
+  sports:       { label: "Sports",       emoji: "🏏", color: "text-orange-700 dark:text-orange-400", bg: "bg-orange-50 dark:bg-orange-950/40" },
 };

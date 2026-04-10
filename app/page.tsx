@@ -216,7 +216,7 @@ export default function HomePage() {
             Community Organizations
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            {["TBSNC", "BANC", "BSA@NCSU", "BPOCNC", "MUNA", "BAIAN", "Trivuj"].map((org) => (
+            {["TBSNC", "BANC", "BSA@NCSU", "BPOCNC", "MUNA", "BAIAN", "Trivuj", "RBT", "RTP Tigers"].map((org) => (
               <span key={org} className="rounded-full border border-gray-200 dark:border-gray-700 px-4 py-1.5 text-sm text-gray-600 dark:text-gray-300">
                 {org}
               </span>

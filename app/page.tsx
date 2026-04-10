@@ -60,9 +60,16 @@ const eventTypeColors: Record<string, string> = {
 };
 
 const directoryLinks = [
-  "Halal Grocery", "Masjids", "Restaurants", "Events",
-  "Community Feed", "Marketplace", "Newcomer Guide",
-  "Directory", "Organizations", "Entrepreneurs",
+  { label: "Halal Grocery",   href: "/grocery" },
+  { label: "Masjids",         href: "/masjids" },
+  { label: "Restaurants",     href: "/restaurants" },
+  { label: "Events",          href: "/events" },
+  { label: "Community Feed",  href: "/community" },
+  { label: "Marketplace",     href: "/marketplace" },
+  { label: "Newcomer Guide",  href: "/newcomer" },
+  { label: "Directory",       href: "/directory" },
+  { label: "Organizations",   href: "/organizations" },
+  { label: "Entrepreneurs",   href: "/entrepreneurs" },
 ];
 
 export default function HomePage() {
@@ -438,13 +445,14 @@ export default function HomePage() {
             Everything you need for life in the Research Triangle — all free, all in one place.
           </p>
           <div className="flex flex-wrap justify-center gap-2">
-            {directoryLinks.map((label) => (
-              <span
-                key={label}
-                className="rounded-full border border-brand-green/25 bg-white dark:bg-gray-900 px-3.5 py-1.5 text-xs font-medium text-brand-green"
+            {directoryLinks.map(({ label, href }) => (
+              <Link
+                key={href}
+                href={href}
+                className="rounded-full border border-brand-green/25 bg-white dark:bg-gray-900 px-3.5 py-1.5 text-xs font-medium text-brand-green hover:bg-brand-green hover:text-white hover:border-brand-green transition-colors"
               >
                 {label}
-              </span>
+              </Link>
             ))}
           </div>
         </div>
@@ -460,12 +468,13 @@ export default function HomePage() {
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             {["TBSNC", "BANC", "BSA@NCSU", "BPOCNC", "MUNA", "BAIAN", "Trivuj", "RBT", "RTP Tigers"].map((org) => (
-              <span
+              <Link
                 key={org}
-                className="rounded-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-4 py-1.5 text-xs font-medium text-gray-600 dark:text-gray-300"
+                href="/organizations"
+                className="rounded-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-4 py-1.5 text-xs font-medium text-gray-600 dark:text-gray-300 hover:border-brand-green hover:text-brand-green transition-colors"
               >
                 {org}
-              </span>
+              </Link>
             ))}
           </div>
         </div>

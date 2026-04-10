@@ -9,6 +9,7 @@ import {
   BookOpen,
   Users,
   Building2,
+  ShoppingCart,
   ArrowRight,
   MapPin,
   CheckCircle2,
@@ -79,6 +80,13 @@ const quickLinks = [
     title: "Organizations",
     desc: "Cultural, religious & student orgs",
     color: "bg-cyan-50 text-cyan-700 dark:bg-cyan-950 dark:text-cyan-400",
+  },
+  {
+    href: "/marketplace",
+    icon: ShoppingCart,
+    title: "Marketplace",
+    desc: "Buy, sell, rent, hire & services",
+    color: "bg-lime-50 text-lime-700 dark:bg-lime-950 dark:text-lime-400",
   },
 ];
 

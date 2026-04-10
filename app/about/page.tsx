@@ -92,8 +92,14 @@ export default function AboutPage() {
       {/* Contact / Corrections */}
       <section id="contact" className="mb-14 scroll-mt-20">
         <h2 className="section-heading mb-2">Contact Us</h2>
-        <p className="text-gray-500 dark:text-gray-400 mb-6">
+        <p className="text-gray-500 dark:text-gray-400 mb-4">
           Found incorrect information? Want to add a listing? Submitting an event? We read every message.
+        </p>
+        <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">
+          Have a home business or service to offer?{" "}
+          <a href="/entrepreneurs/submit" className="text-brand-green font-medium hover:underline">
+            List it free on our Entrepreneurs directory →
+          </a>
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

@@ -11,6 +11,7 @@ const links = {
     { href: "/newcomer", label: "Newcomer Guide" },
     { href: "/directory", label: "Community Directory" },
     { href: "/about", label: "About & Contact" },
+    { href: "/entrepreneurs", label: "Local Entrepreneurs" },
   ],
   orgs: [
     { href: "https://www.tbsnc.org", label: "TBSNC" },

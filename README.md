@@ -30,6 +30,8 @@ BanglaRTP is **100% free, no paywall, no ads** — built by and for the communit
 | `/newcomer/first-month` | DMV, housing, schools, utilities |
 | `/newcomer/first-three-months` | Community, healthcare, taxes, immigration |
 | `/directory` | Bangla-speaking doctors, lawyers, CPAs, realtors |
+| `/entrepreneurs` | Local Bangladeshi entrepreneurs & home businesses |
+| `/entrepreneurs/submit` | Free submission form for new business listings |
 | `/about` | Mission, community orgs, contact/corrections form |
 
 ---

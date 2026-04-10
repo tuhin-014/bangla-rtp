@@ -1,5 +1,6 @@
 import Link from "next/link";
 import {
+  Briefcase,
   ShoppingBasket,
   MoonStar,
   UtensilsCrossed,
@@ -55,6 +56,13 @@ const quickLinks = [
     title: "Community Directory",
     desc: "Doctors, lawyers, agents",
     color: "bg-rose-50 text-rose-700 dark:bg-rose-950 dark:text-rose-400",
+  },
+  {
+    href: "/entrepreneurs",
+    icon: Briefcase,
+    title: "Local Entrepreneurs",
+    desc: "Caterers, tailors, tutors & more",
+    color: "bg-amber-50 text-amber-700 dark:bg-amber-950 dark:text-amber-400",
   },
 ];
 

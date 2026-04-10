@@ -11,12 +11,15 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          green: "#006A4E",
-          "green-light": "#008B66",
-          "green-dark": "#004F3B",
-          red: "#F42A41",
-          "red-light": "#FF4D63",
-          "red-dark": "#C41E30",
+          green:        "#006A4E",   // Bangladesh flag green
+          "green-light":"#00856A",
+          "green-dark": "#004d37",
+          navy:         "#3C3B6E",   // US flag canton blue
+          "navy-dark":  "#2a2952",
+          red:          "#B22234",   // US flag red (deeper, shared CTA accent)
+          "red-bright": "#F42A41",   // Bangladesh circle red (vivid)
+          "red-light":  "#FF4D63",
+          gold:         "#FFD700",   // Star gold (use sparingly)
         },
       },
       fontFamily: {

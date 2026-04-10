@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { DualFlags } from "@/components/ui/CountryFlags";
 
 const links = {
   community: [
@@ -13,6 +14,7 @@ const links = {
     { href: "/newcomer", label: "Newcomer Guide" },
     { href: "/directory", label: "Community Directory" },
     { href: "/about", label: "About & Contact" },
+    { href: "/anthems", label: "National Anthems" },
     { href: "/entrepreneurs", label: "Local Entrepreneurs" },
   ],
   orgs: [
@@ -83,10 +85,13 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 border-t border-gray-200 dark:border-gray-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p className="text-xs text-gray-400">
-            © {new Date().getFullYear()} BanglaRTP. Free and open for the community.
-          </p>
+        <div className="mt-10 border-t border-gray-200 dark:border-gray-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div className="flex items-center gap-3">
+            <DualFlags size="xs" />
+            <p className="text-xs text-gray-400">
+              © {new Date().getFullYear()} BanglaRTP. Free and open for the community.
+            </p>
+          </div>
           <p className="text-xs text-gray-400">
             See an error?{" "}
             <Link href="/about#contact" className="text-brand-green hover:underline">

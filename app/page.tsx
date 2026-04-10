@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { DualFlags } from "@/components/ui/CountryFlags";
 import {
   Briefcase,
   MessageSquare,
@@ -114,9 +115,11 @@ export default function HomePage() {
         />
         <div className="page-container relative py-20 sm:py-28">
           <div className="max-w-3xl">
-            <p className="font-bangla text-4xl font-bold mb-3 opacity-95 tracking-wide">
+            <DualFlags size="sm" variant="light" className="mb-4" />
+            <p className="font-bangla text-4xl font-bold mb-1 opacity-95 tracking-wide">
               স্বাগতম
             </p>
+            <p className="text-green-200 text-sm mb-3">Serving the Bangladeshi community in the Research Triangle</p>
             <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-4">
               New to RTP?<br />
               <span className="text-green-200">Everything a Bangladeshi family needs</span> — in one place.

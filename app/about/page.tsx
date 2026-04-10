@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Heart, Mail, AlertCircle, Building2 } from "lucide-react";
 import { ContactForm } from "@/components/about/ContactForm";
+import { BangladeshFlag, USFlag } from "@/components/ui/CountryFlags";
 
 export const metadata = { title: "About | BanglaRTP" };
 
@@ -29,6 +30,30 @@ export default function AboutPage() {
           <p>
             This site is maintained by community volunteers. If you see outdated info, missing listings, or want to contribute — please reach out.
           </p>
+        </div>
+      </section>
+
+      {/* Two homes */}
+      <section className="mb-14">
+        <div className="rounded-2xl bg-gradient-to-r from-brand-green/10 to-brand-navy/10 dark:from-brand-green/20 dark:to-brand-navy/20 border border-brand-green/20 dark:border-brand-green/30 p-8 flex flex-col sm:flex-row items-center gap-6">
+          <div className="flex items-center gap-4 shrink-0">
+            <BangladeshFlag className="h-16 rounded-lg shadow border border-white/30" />
+            <span className="text-3xl">🤝</span>
+            <USFlag className="h-16 rounded-lg shadow border border-gray-200 dark:border-gray-700" />
+          </div>
+          <div>
+            <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-1">
+              Honoring our two homes
+            </h2>
+            <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+              Bangladesh — the land of our roots, our language, and our culture.
+              The United States — the country we have built our futures in. BanglaRTP exists at the
+              intersection of both.{" "}
+              <Link href="/anthems" className="text-brand-green font-medium hover:underline">
+                Listen to both national anthems →
+              </Link>
+            </p>
+          </div>
         </div>
       </section>
 

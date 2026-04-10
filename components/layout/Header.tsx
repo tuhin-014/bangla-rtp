@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Menu, X, MapPin } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { DualFlags } from "@/components/ui/CountryFlags";
 
 const navLinks = [
   { href: "/grocery", label: "Halal Grocery" },
@@ -32,6 +33,7 @@ export function Header() {
               বা
             </span>
             <span className="text-lg">BanglaRTP</span>
+            <DualFlags size="xs" className="hidden sm:inline-flex opacity-80" />
           </Link>
 
           {/* Desktop nav */}

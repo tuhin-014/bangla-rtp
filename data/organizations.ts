@@ -93,6 +93,7 @@ export const organizations: Organization[] = [
     description:
       "Bangladeshi cricket club based in the Research Triangle area. Participates in local leagues and community tournaments. Open to new players. Contact via community networks for practice schedules and match info.",
     type: "sports",
+    facebook: "https://www.facebook.com/share/1Hgcfvj2m1/?mibextid=wwXIfr",
     city: "Research Triangle",
   },
   {

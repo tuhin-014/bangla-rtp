@@ -36,6 +36,25 @@ export const organizations: Organization[] = [
     city: "Raleigh",
   },
   {
+    id: "probaho",
+    name: "Probaho",
+    fullName: "Probaho — Triangle NC",
+    description:
+      "A Bengali cultural organization in the Research Triangle area. 'Probaho' (প্রবাহ) means 'flow' or 'current' in Bengali — reflecting the organization's mission of keeping Bengali culture alive in the diaspora. Active through community events and gatherings.",
+    type: "cultural",
+    city: "Research Triangle",
+  },
+  {
+    id: "trivuj",
+    name: "Trivuj",
+    fullName: "Trivuj — Triangle Music Project",
+    description:
+      "Nonprofit dedicated to promoting peace and love through Bangla music in the Research Triangle. Hosts Rabindra Sangeet, Nazrul Geeti, folk, and modern Bangla music performances and cultural events for the Bengali community in RTP.",
+    type: "cultural",
+    facebook: "https://www.facebook.com/trivujtmp/",
+    city: "Raleigh",
+  },
+  {
     id: "bsa-ncsu",
     name: "BSA @ NC State",
     fullName: "Bangladeshi Students Association at NC State University",
@@ -72,53 +91,9 @@ export const organizations: Organization[] = [
     name: "BAIAN",
     fullName: "Bangladeshi American Islamic Association North Carolina",
     description:
-      "Bangladeshi Muslim community organization active in the Research Triangle area. Hosts family nights, Bangladeshi food festivals, and community gatherings — events have been held at Parkwood Masjid (JIAR) in Durham. No public website; active through community networks.",
+      "Bangladeshi Muslim community organization active in the Research Triangle area. Hosts family nights, Bangladeshi food festivals, and community gatherings — events have been held at Parkwood Masjid in Durham. No public website; active through community networks.",
     type: "religious",
     city: "Durham",
-  },
-  {
-    id: "probaho",
-    name: "Probaho",
-    fullName: "Probaho — Triangle NC",
-    description:
-      "A Bengali cultural organization in the Research Triangle area. 'Probaho' (প্রবাহ) means 'flow' or 'current' in Bengali — reflecting the organization's mission of keeping Bengali culture alive in the diaspora. Active through community events and gatherings.",
-    type: "cultural",
-    city: "Research Triangle",
-  },
-  {
-    id: "icar",
-    name: "ICAR / ICR",
-    fullName: "Islamic Center of Raleigh",
-    description:
-      "One of the largest Islamic centers in the Triangle. Hosts daily prayers, Jummah, an Islamic school (ICR Academy), youth programs, and community events. A gathering place for Muslims across the greater Raleigh area.",
-    type: "religious",
-    website: "https://www.icraleigh.com",
-    phone: "(919) 834-9572",
-    city: "Raleigh",
-    foundedYear: 1981,
-  },
-  {
-    id: "icm",
-    name: "ICM",
-    fullName: "Islamic Center of Morrisville",
-    description:
-      "Serving the rapidly growing Muslim community in Morrisville and Cary. Large facility with full-time Islamic school, gym, and community hall. Particularly active with the South Asian community in western Wake County.",
-    type: "religious",
-    website: "https://www.icmorrisville.org",
-    phone: "(919) 481-9492",
-    city: "Morrisville",
-  },
-  {
-    id: "jiar",
-    name: "JIAR",
-    fullName: "Jamaat Ibad Ar-Rahman",
-    description:
-      "The largest Muslim community organization in Durham, chartered in NC in 1981. Operates two masjid facilities including Parkwood Masjid, runs Al-Huda Academy (full-time Islamic elementary school), Al Misbah Quran Academy, and provides community services including funeral and marriage services.",
-    type: "religious",
-    website: "https://ibadarrahman.org",
-    phone: "(919) 237-2968",
-    city: "Durham",
-    foundedYear: 1981,
   },
 ];
 

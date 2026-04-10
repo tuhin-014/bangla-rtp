@@ -77,4 +77,44 @@ export const masjids: Masjid[] = [
       "Islamic Society of Central Florida Durham chapter. Active community with daily prayers, Islamic school, and youth programs.",
     jummah_time: "1:30 PM",
   },
+  {
+    id: "mycc-rdu",
+    name: "Muslim Youth & Community Center (MYCC-RDU)",
+    address: "5017 Deah Way, Raleigh, NC 27616",
+    city: "Raleigh",
+    phone: "(919) 533-9043",
+    website: "https://mycc-rdu.org",
+    prayer_times_url: "https://mycc-rdu.org",
+    maps_url: "https://maps.google.com/?q=MYCC-RDU+5017+Deah+Way+Raleigh+NC",
+    description:
+      "North Raleigh Masjid — operated in collaboration with MAS (Muslim American Society). Offers 5 daily prayers, Jummah, youth programs, activity center, and community social services.",
+    jummah_time: "1:30 PM",
+  },
+  {
+    id: "al-noor-ic",
+    name: "Al-Noor Islamic Center (Alnooric)",
+    address: "6317 Sunset Lake Rd, Fuquay-Varina, NC 27526",
+    city: "Raleigh",
+    phone: "(919) 705-0131",
+    website: "https://alnooric.org",
+    prayer_times_url: "https://alnooric.org/monthly-prayer-times",
+    maps_url: "https://maps.google.com/?q=Al-Noor+Islamic+Center+6317+Sunset+Lake+Rd+Fuquay-Varina",
+    description:
+      "Serving the Holly Springs and Fuquay-Varina Triangle area. Affiliated with MAS-RDU. Offers daily prayers, Jummah, food pantry, youth programs, and women's groups.",
+    jummah_time: "1:15 PM",
+  },
+  {
+    id: "parkwood-masjid",
+    name: "Parkwood Masjid (JIAR)",
+    address: "5122 Revere Rd, Durham, NC 27713",
+    city: "Durham",
+    phone: "(919) 237-2968",
+    website: "https://ibadarrahman.org",
+    prayer_times_url: "https://ibadarrahman.org/prayer-times/",
+    maps_url: "https://maps.google.com/?q=Parkwood+Masjid+5122+Revere+Rd+Durham+NC",
+    description:
+      "Part of Jamaat Ibad Ar-Rahman (JIAR) — the largest Muslim community in Durham, chartered 1981. The Parkwood facility is home to Al-Huda Academy (full-time Islamic elementary school) and Al Misbah Quran Academy. Hosts Eid prayers.",
+    jummah_time: "1:10 PM",
+  },
 ];
+

@@ -1,34 +1,8 @@
-import { Heart, Mail, AlertCircle, ExternalLink } from "lucide-react";
+import Link from "next/link";
+import { Heart, Mail, AlertCircle, Building2 } from "lucide-react";
 import { ContactForm } from "@/components/about/ContactForm";
 
-export const metadata = { title: "About" };
-
-const orgs = [
-  {
-    name: "TBSNC",
-    full: "Triangle Bangladeshi Society of North Carolina",
-    desc: "The primary cultural organization for Bangladeshis in the Triangle. Organizes Eid celebrations, Pohela Boishakh, and community events.",
-    url: "https://www.tbsnc.org",
-  },
-  {
-    name: "BANC",
-    full: "Bangladeshi Association of North Carolina",
-    desc: "Community welfare and networking organization supporting Bangladeshis across North Carolina.",
-    url: "https://www.bancnc.org",
-  },
-  {
-    name: "BSA@NCSU",
-    full: "Bangladeshi Students Association at NC State",
-    desc: "Student organization at NC State University supporting Bangladeshi students with social and cultural programs.",
-    url: "https://orgs.ncsu.edu/bsa",
-  },
-  {
-    name: "BPOCNC",
-    full: "Bangladeshi Professionals Organization of Carolinas",
-    desc: "Professional networking organization for Bangladeshi professionals. Organizes cricket tournaments and career events.",
-    url: "#",
-  },
-];
+export const metadata = { title: "About | BanglaRTP" };
 
 export default function AboutPage() {
   return (
@@ -62,31 +36,15 @@ export default function AboutPage() {
       <section className="mb-14">
         <h2 className="section-heading mb-2">Community Organizations</h2>
         <p className="text-gray-500 dark:text-gray-400 mb-6">
-          These organizations are the backbone of the RTP Bangladeshi community. BanglaRTP was built to complement their work.
+          These organizations are the backbone of the RTP Bangladeshi community. BanglaRTP was built to complement their work — TBSNC, BANC, BSA@NCSU, BPOCNC, MUNA, and more.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-          {orgs.map((org) => (
-            <div key={org.name} className="card">
-              <div className="flex items-start justify-between gap-2 mb-2">
-                <div>
-                  <span className="text-lg font-bold text-brand-green">{org.name}</span>
-                  <p className="text-sm font-medium text-gray-700 dark:text-gray-300">{org.full}</p>
-                </div>
-                {org.url !== "#" && (
-                  <a
-                    href={org.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="shrink-0 text-brand-green hover:underline"
-                  >
-                    <ExternalLink size={16} />
-                  </a>
-                )}
-              </div>
-              <p className="text-sm text-gray-500 dark:text-gray-400">{org.desc}</p>
-            </div>
-          ))}
-        </div>
+        <Link
+          href="/organizations"
+          className="inline-flex items-center gap-2 btn-primary text-sm"
+        >
+          <Building2 size={16} />
+          View All Organizations →
+        </Link>
       </section>
 
       {/* Contact / Corrections */}

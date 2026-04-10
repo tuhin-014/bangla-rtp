@@ -14,6 +14,7 @@ const navLinks = [
   { href: "/newcomer", label: "Newcomer Guide" },
   { href: "/directory", label: "Directory" },
   { href: "/entrepreneurs", label: "Entrepreneurs" },
+  { href: "/organizations", label: "Organizations" },
   { href: "/about", label: "About" },
 ];
 

@@ -8,6 +8,7 @@ import {
   CalendarDays,
   BookOpen,
   Users,
+  Building2,
   ArrowRight,
   MapPin,
   CheckCircle2,
@@ -71,6 +72,13 @@ const quickLinks = [
     title: "Community Feed",
     desc: "Ask, offer, share, connect",
     color: "bg-indigo-50 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-400",
+  },
+  {
+    href: "/organizations",
+    icon: Building2,
+    title: "Organizations",
+    desc: "Cultural, religious & student orgs",
+    color: "bg-cyan-50 text-cyan-700 dark:bg-cyan-950 dark:text-cyan-400",
   },
 ];
 

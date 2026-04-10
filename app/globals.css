@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-green: #006A4E;
+  --brand-green-light: #008B66;
+  --brand-red: #F42A41;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-lg bg-brand-green px-5 py-2.5 text-sm font-semibold text-white shadow-sm
+      hover:bg-brand-green-light focus:outline-none focus:ring-2 focus:ring-brand-green focus:ring-offset-2
+      transition-colors;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 rounded-lg border border-brand-green px-5 py-2.5 text-sm font-semibold text-brand-green
+      hover:bg-green-50 focus:outline-none focus:ring-2 focus:ring-brand-green focus:ring-offset-2
+      transition-colors dark:hover:bg-green-950;
+  }
+
+  .card {
+    @apply rounded-xl border border-gray-200 bg-white p-5 shadow-sm
+      dark:border-gray-800 dark:bg-gray-900;
+  }
+
+  .section-heading {
+    @apply text-2xl font-bold text-gray-900 dark:text-gray-50;
+  }
+
+  .page-container {
+    @apply mx-auto max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* Bangla script */
+.font-bangla {
+  font-family: 'Noto Sans Bengali', 'SolaimanLipi', system-ui, sans-serif;
+}

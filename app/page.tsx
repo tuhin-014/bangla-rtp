@@ -8,6 +8,7 @@ import {
   Award,
   MapPin,
 } from "lucide-react";
+import { AudioPlayer } from "@/components/ui/AudioPlayer";
 import { events } from "@/data/events";
 import { formatDateShort, isUpcoming } from "@/lib/utils";
 
@@ -262,17 +263,11 @@ export default function HomePage() {
             <p className="text-xs text-gray-500 dark:text-gray-400 mb-3 italic">
               Written by Rabindranath Tagore, 1905 · Adopted 1972
             </p>
-            <audio controls className="w-full h-10" preload="none">
-              <source
-                src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/bc/Amar_Sonar_Bangla_-_official_vocal_music_of_the_National_anthem_of_Bangladesh.ogg/Amar_Sonar_Bangla_-_official_vocal_music_of_the_National_anthem_of_Bangladesh.ogg.mp3"
-                type="audio/mpeg"
-              />
-              <source
-                src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Amar_Sonar_Bangla_-_official_vocal_music_of_the_National_anthem_of_Bangladesh.ogg"
-                type="audio/ogg"
-              />
-            </audio>
-            <p className="mt-2 text-xs text-gray-400">Audio: Public domain via Wikimedia Commons</p>
+            <AudioPlayer
+              srcMp3="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/bc/Amar_Sonar_Bangla_-_official_vocal_music_of_the_National_anthem_of_Bangladesh.ogg/Amar_Sonar_Bangla_-_official_vocal_music_of_the_National_anthem_of_Bangladesh.ogg.mp3"
+              srcOgg="https://upload.wikimedia.org/wikipedia/commons/b/bc/Amar_Sonar_Bangla_-_official_vocal_music_of_the_National_anthem_of_Bangladesh.ogg"
+              caption="Audio: Public domain via Wikimedia Commons"
+            />
           </div>
 
           {/* Star-Spangled Banner */}
@@ -287,17 +282,11 @@ export default function HomePage() {
             <p className="text-xs text-gray-500 dark:text-gray-400 mb-3 italic">
               Written by Francis Scott Key, 1814 · Adopted 1931
             </p>
-            <audio controls className="w-full h-10" preload="none">
-              <source
-                src="https://upload.wikimedia.org/wikipedia/commons/transcoded/a/a4/The_Star-Spangled_Banner_-_U.S._Army_Band.ogg/The_Star-Spangled_Banner_-_U.S._Army_Band.ogg.mp3"
-                type="audio/mpeg"
-              />
-              <source
-                src="https://upload.wikimedia.org/wikipedia/commons/a/a4/The_Star-Spangled_Banner_-_U.S._Army_Band.ogg"
-                type="audio/ogg"
-              />
-            </audio>
-            <p className="mt-2 text-xs text-gray-400">Audio: Public domain via Wikimedia Commons (U.S. Army Band)</p>
+            <AudioPlayer
+              srcMp3="https://upload.wikimedia.org/wikipedia/commons/transcoded/a/a4/The_Star-Spangled_Banner_-_U.S._Army_Band.ogg/The_Star-Spangled_Banner_-_U.S._Army_Band.ogg.mp3"
+              srcOgg="https://upload.wikimedia.org/wikipedia/commons/a/a4/The_Star-Spangled_Banner_-_U.S._Army_Band.ogg"
+              caption="Audio: Public domain via Wikimedia Commons (U.S. Army Band)"
+            />
           </div>
         </div>
       </section>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BangladeshFlag, USFlag } from "@/components/ui/CountryFlags";
+import { AudioPlayer } from "@/components/ui/AudioPlayer";
 
 export const metadata = {
   title: "National Anthems | BanglaRTP",
@@ -44,12 +45,10 @@ export default function AnthemsPage() {
 
           {/* Audio player */}
           <div className="rounded-xl bg-gray-50 dark:bg-gray-900/60 border border-gray-200 dark:border-gray-800 p-5 mb-6">
-            <audio controls className="w-full" preload="metadata">
-              <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/bc/Amar_Sonar_Bangla_-_official_vocal_music_of_the_National_anthem_of_Bangladesh.ogg/Amar_Sonar_Bangla_-_official_vocal_music_of_the_National_anthem_of_Bangladesh.ogg.mp3" type="audio/mpeg" />
-              <source src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Amar_Sonar_Bangla_-_official_vocal_music_of_the_National_anthem_of_Bangladesh.ogg" type="audio/ogg" />
-              Your browser does not support the audio element.{" "}
-              <a href="https://upload.wikimedia.org/wikipedia/commons/b/bc/Amar_Sonar_Bangla_-_official_vocal_music_of_the_National_anthem_of_Bangladesh.ogg">Download the audio file</a>
-            </audio>
+            <AudioPlayer
+              srcMp3="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/bc/Amar_Sonar_Bangla_-_official_vocal_music_of_the_National_anthem_of_Bangladesh.ogg/Amar_Sonar_Bangla_-_official_vocal_music_of_the_National_anthem_of_Bangladesh.ogg.mp3"
+              srcOgg="https://upload.wikimedia.org/wikipedia/commons/b/bc/Amar_Sonar_Bangla_-_official_vocal_music_of_the_National_anthem_of_Bangladesh.ogg"
+            />
             <div className="mt-2 flex items-center justify-between flex-wrap gap-2">
               <p className="text-xs text-gray-400">Audio: Public domain via Wikimedia Commons</p>
               <a
@@ -133,12 +132,10 @@ I have seen spread all over sweet smiles.`}
 
           {/* Audio player */}
           <div className="rounded-xl bg-gray-50 dark:bg-gray-900/60 border border-gray-200 dark:border-gray-800 p-5 mb-6">
-            <audio controls className="w-full" preload="metadata">
-              <source src="https://upload.wikimedia.org/wikipedia/commons/transcoded/a/a4/The_Star-Spangled_Banner_-_U.S._Army_Band.ogg/The_Star-Spangled_Banner_-_U.S._Army_Band.ogg.mp3" type="audio/mpeg" />
-              <source src="https://upload.wikimedia.org/wikipedia/commons/a/a4/The_Star-Spangled_Banner_-_U.S._Army_Band.ogg" type="audio/ogg" />
-              Your browser does not support the audio element.{" "}
-              <a href="https://upload.wikimedia.org/wikipedia/commons/a/a4/The_Star-Spangled_Banner_-_U.S._Army_Band.ogg">Download the audio file</a>
-            </audio>
+            <AudioPlayer
+              srcMp3="https://upload.wikimedia.org/wikipedia/commons/transcoded/a/a4/The_Star-Spangled_Banner_-_U.S._Army_Band.ogg/The_Star-Spangled_Banner_-_U.S._Army_Band.ogg.mp3"
+              srcOgg="https://upload.wikimedia.org/wikipedia/commons/a/a4/The_Star-Spangled_Banner_-_U.S._Army_Band.ogg"
+            />
             <div className="mt-2 flex items-center justify-between flex-wrap gap-2">
               <p className="text-xs text-gray-400">Audio: Public domain via Wikimedia Commons (U.S. Army Band)</p>
               <a

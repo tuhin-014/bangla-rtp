@@ -108,9 +108,9 @@ export const organizations: Organization[] = [
   {
     id: "baian",
     name: "BAIAN",
-    fullName: "Bangladeshi American Islamic Association North Carolina",
+    fullName: "Bangladeshi American Islamic Association of North Carolina",
     description:
-      "Bangladeshi Muslim community organization active in the Research Triangle area. Hosts family nights, Bangladeshi food festivals, and community gatherings — events have been held at Parkwood Masjid in Durham. No public website; active through community networks.",
+      "Bangladeshi American Islamic Association of North Carolina. Serves Bangladeshi Muslim families in the Triangle area, hosting family nights, food festivals, and educational programs. Frequently holds events at JIAR Parkwood Masjid in Durham.",
     type: "religious",
     city: "Durham",
   },

@@ -456,7 +456,7 @@ export default function HomePage() {
             Community Organizations
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            {["TBSNC", "BANC", "BSA@NCSU", "BPOCNC", "MUNA", "BAIAN", "Trivuj", "RBT", "RTP Tigers"].map((org) => (
+            {["TBSNC", "BANC", "BSA@NCSU", "BPOCNC", "MUNA", "BAIAN", "Trivuj", "RBT", "RTP Tigers", "Sundarban CC"].map((org) => (
               <Link
                 key={org}
                 href="/organizations"

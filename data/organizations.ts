@@ -106,6 +106,15 @@ export const organizations: Organization[] = [
     city: "Research Triangle",
   },
   {
+    id: "sundarban-cc",
+    name: "Sundarban",
+    fullName: "Sundarban Cricket Club",
+    description:
+      "Bangladeshi cricket club in the Research Triangle area, named after the world-famous Sundarbans mangrove forest. Open to community players for practice and weekend matches.",
+    type: "sports",
+    city: "Research Triangle",
+  },
+  {
     id: "baian",
     name: "BAIAN",
     fullName: "Bangladeshi American Islamic Association of North Carolina",
